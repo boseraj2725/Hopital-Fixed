@@ -1,0 +1,324 @@
+/* ===========================
+   My Appointments
+=========================== */
+
+.myAppointments{
+    width:95%;
+    max-width:1400px;
+    margin:40px auto;
+    padding:30px;
+}
+
+.myAppointments h2{
+    text-align:center;
+    font-size:34px;
+    color:#0f172a;
+    margin-bottom:30px;
+    font-weight:700;
+}
+
+/* Search */
+
+.searchBox{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:0 auto 35px;
+    padding:15px 20px;
+    border:none;
+    outline:none;
+    border-radius:50px;
+    background:#fff;
+    font-size:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.searchBox:focus{
+    transform:scale(1.02);
+    box-shadow:0 15px 35px rgba(0,123,255,.25);
+}
+
+/* Grid */
+
+.appointmentGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:30px;
+
+}
+
+/* Card */
+
+.appointmentCard{
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:28px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.appointmentCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        #00b4db,
+        #0083b0
+    );
+
+}
+
+.appointmentCard:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.appointmentCard h3{
+
+    color:#0077b6;
+
+    margin-bottom:18px;
+
+    font-size:25px;
+
+}
+
+.appointmentCard p{
+
+    margin:10px 0;
+
+    font-size:16px;
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+.appointmentCard strong{
+
+    color:#111827;
+
+}
+
+/* Status */
+
+.status{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    font-size:14px;
+
+    color:#fff;
+
+    text-transform:uppercase;
+
+}
+
+/* Pending */
+
+.status.Pending{
+
+    background:#f59e0b;
+
+}
+
+/* Approved */
+
+.status.Approved{
+
+    background:#16a34a;
+
+}
+
+/* Completed */
+
+.status.Completed{
+
+    background:#2563eb;
+
+}
+
+/* Cancelled */
+
+.status.Cancelled{
+
+    background:#dc2626;
+
+}
+
+/* Button */
+
+.cancelBtn{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ef4444;
+
+    color:#fff;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.cancelBtn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-2px);
+
+}
+
+/* Empty */
+
+.empty{
+
+    text-align:center;
+
+    font-size:22px;
+
+    color:#6b7280;
+
+    margin-top:70px;
+
+}
+
+/* Loading */
+
+.loading{
+
+    text-align:center;
+
+    font-size:22px;
+
+    color:#2563eb;
+
+    margin-top:70px;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.myAppointments{
+
+padding:15px;
+
+}
+
+.myAppointments h2{
+
+font-size:28px;
+
+}
+
+.appointmentGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.appointmentCard{
+
+padding:22px;
+
+}
+
+.searchBox{
+
+font-size:15px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.myAppointments h2{
+
+font-size:24px;
+
+}
+
+.appointmentCard h3{
+
+font-size:20px;
+
+}
+
+.appointmentCard p{
+
+font-size:14px;
+
+}
+
+.status{
+
+font-size:12px;
+
+padding:8px 16px;
+
+}
+
+.cancelBtn{
+
+font-size:14px;
+
+padding:12px;
+
+}
+
+}

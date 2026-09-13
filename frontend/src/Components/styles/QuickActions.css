@@ -1,0 +1,153 @@
+/* =====================================================
+   QUICK ACTIONS - FORCE FULL WIDTH
+   Add this at the VERY END of QuickActions.css
+===================================================== */
+
+.quick-actions {
+    display: block !important;
+
+    width: 100% !important;
+
+    box-sizing: border-box !important;
+
+    margin-top: 30px !important;
+
+    padding: 25px !important;
+
+    background: #ffffff !important;
+
+    border-radius: 18px !important;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+
+/* TITLE MUST BE FULL ROW */
+
+.quick-actions h2 {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 0 0 25px 0 !important;
+
+    color: #0f172a !important;
+
+    font-size: 25px !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* GRID MUST BE BELOW TITLE */
+
+.quick-actions .quick-grid {
+    display: grid !important;
+
+    width: 100% !important;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 22px !important;
+
+    margin: 0 !important;
+}
+
+
+/* BIG CARDS */
+
+.quick-actions .quick-card {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    min-height: 170px !important;
+
+    padding: 30px !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 14px !important;
+
+    background: #2563eb !important;
+
+    color: #ffffff !important;
+
+    border-radius: 16px !important;
+
+    text-decoration: none !important;
+
+    font-size: 32px !important;
+
+    transition: 0.3s ease !important;
+}
+
+
+/* ICON */
+
+.quick-actions .quick-card svg {
+    width: 48px !important;
+    height: 48px !important;
+}
+
+
+/* TEXT */
+
+.quick-actions .quick-card span {
+    font-size: 17px !important;
+
+    font-weight: 600 !important;
+
+    text-align: center !important;
+}
+
+
+/* HOVER */
+
+.quick-actions .quick-card:hover {
+    transform: translateY(-6px) !important;
+
+    background: #1d4ed8 !important;
+
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25) !important;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .quick-actions .quick-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+
+    .quick-actions {
+        padding: 18px !important;
+    }
+
+    .quick-actions .quick-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .quick-actions .quick-card {
+        min-height: 120px !important;
+
+        padding: 22px !important;
+    }
+
+}

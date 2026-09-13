@@ -1,0 +1,60 @@
+.recent-bills{
+    background:#fff;
+    margin-top:30px;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    overflow-x:auto;
+}
+
+.recent-bills h2{
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+.recent-bills table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.recent-bills th{
+    background:#2563eb;
+    color:#fff;
+    padding:14px;
+}
+
+.recent-bills td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.payment{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.payment.paid{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.payment.pending{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.invoice-btn{
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    padding:8px 14px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.invoice-btn:hover{
+    background:#1d4ed8;
+}

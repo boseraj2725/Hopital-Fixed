@@ -1,0 +1,71 @@
+.appointment{
+    min-height:100vh;
+    background:#f5f7fb;
+    padding:60px 20px;
+}
+
+.appointment h1{
+    text-align:center;
+    color:#0f766e;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.appointment-form{
+    max-width:700px;
+    margin:auto;
+    background:#ffffff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus{
+    border-color:#0f766e;
+}
+
+.appointment-form button{
+    width:100%;
+    padding:15px;
+    background:#0f766e;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.appointment-form button:hover{
+    background:#0b5f59;
+}
+
+@media(max-width:768px){
+
+.appointment{
+    padding:30px 15px;
+}
+
+.appointment h1{
+    font-size:30px;
+}
+
+.appointment-form{
+    padding:25px;
+}
+
+}

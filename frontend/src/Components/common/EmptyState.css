@@ -1,0 +1,37 @@
+.empty-state {
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+.empty-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+}
+
+.empty-state h2 {
+
+    color: #1E3A8A;
+
+    margin-bottom: 10px;
+
+}
+
+.empty-state p {
+
+    color: #777;
+
+    font-size: 16px;
+
+}

@@ -1,0 +1,33 @@
+.hospital-profile{
+    padding:40px;
+    background:#f4f7fb;
+    min-height:100vh;
+}
+
+.hospital-profile h1{
+    text-align:center;
+    color:#0f766e;
+    margin-bottom:30px;
+}
+
+.profile-card{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.info-box{
+    background:#0f766e;
+    color:#fff;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}

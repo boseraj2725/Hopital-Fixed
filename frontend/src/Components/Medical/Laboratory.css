@@ -1,0 +1,84 @@
+.laboratory-page{
+    min-height:100vh;
+    padding:60px 20px;
+    background:#f5f9ff;
+}
+
+.laboratory-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.laboratory-container h1{
+    text-align:center;
+    color:#1976d2;
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 50px;
+    color:#666;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.laboratory-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.laboratory-card{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.laboratory-card:hover{
+    transform:translateY(-8px);
+}
+
+.laboratory-card h3{
+    color:#1976d2;
+    margin-bottom:15px;
+}
+
+.laboratory-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+.lab-info{
+    margin-top:50px;
+    background:#1976d2;
+    color:white;
+    text-align:center;
+    padding:40px;
+    border-radius:15px;
+}
+
+.lab-info h2{
+    margin-bottom:10px;
+}
+
+.lab-info h3{
+    margin-top:10px;
+    font-size:30px;
+}
+
+@media(max-width:768px){
+
+    .laboratory-container h1{
+        font-size:28px;
+    }
+
+    .lab-info h3{
+        font-size:24px;
+    }
+
+}

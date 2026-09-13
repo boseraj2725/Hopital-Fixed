@@ -1,0 +1,160 @@
+.settings-container {
+    min-height: 100vh;
+    padding: 40px;
+    background: linear-gradient(135deg, #e0f7fa, #f5f7fa, #dbeafe);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.settings-container h1 {
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.profile-card {
+    width: 300px;
+    margin: 0 auto 35px;
+    background: rgba(255, 255, 255, .75);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+    transition: .3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-6px);
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #2563eb;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-card h2 {
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.profile-card p {
+    color: #64748b;
+    font-weight: 600;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.settings-box {
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    transition: .3s;
+}
+
+.settings-box:hover {
+    transform: translateY(-5px);
+}
+
+.settings-box h2 {
+    margin-bottom: 20px;
+    color: #2563eb;
+}
+
+.settings-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    transition: .3s;
+    box-sizing: border-box;
+}
+
+.settings-box input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 10px rgba(37, 99, 235, .25);
+}
+
+.settings-box button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.settings-box button:hover {
+    background: #1d4ed8;
+}
+
+.logout-btn {
+
+    display: block;
+    width: 240px;
+    margin: 40px auto;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #ef4444;
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.logout-btn:hover {
+
+    background: #dc2626;
+
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+
+}
+
+@media(max-width:768px) {
+
+    .settings-container {
+        padding: 20px;
+    }
+
+    .profile-card {
+        width: 100%;
+    }
+
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logout-btn {
+        width: 100%;
+    }
+
+}

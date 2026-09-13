@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+.add-patient{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    background:linear-gradient(135deg,#e0f2fe,#f8fafc,#dbeafe);
+}
+
+.add-patient form{
+    width:100%;
+    max-width:700px;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+
+.add-patient h1{
+    text-align:center;
+    color:#0f766e;
+    margin-bottom:30px;
+    font-size:34px;
+}
+
+.add-patient input,
+.add-patient select,
+.add-patient textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    font-size:16px;
+    transition:.3s;
+    outline:none;
+}
+
+.add-patient textarea{
+    resize:none;
+    height:120px;
+}
+
+.add-patient input:focus,
+.add-patient select:focus,
+.add-patient textarea:focus{
+    border-color:#0f766e;
+    box-shadow:0 0 10px rgba(15,118,110,.2);
+}
+
+.add-patient button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#0f766e;
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.add-patient button:hover{
+    background:#115e59;
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+.add-patient form{
+    padding:25px;
+}
+
+.add-patient h1{
+    font-size:28px;
+}
+
+}

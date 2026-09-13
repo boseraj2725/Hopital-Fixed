@@ -1,0 +1,662 @@
+/* =========================================================
+   EDIT APPOINTMENT
+   Premium SmartCare / Medlora Style
+========================================================= */
+
+.edit-appointment {
+    min-height: calc(100vh - 70px);
+    width: 100%;
+    padding: 45px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(59, 130, 246, 0.10),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(99, 102, 241, 0.08),
+            transparent 35%
+        ),
+        #f5f8fc;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.edit-form {
+    width: 100%;
+    max-width: 720px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(226, 232, 240, 0.9);
+
+    border-radius: 24px;
+
+    padding: 38px;
+
+    box-shadow:
+        0 20px 45px rgba(15, 23, 42, 0.08),
+        0 5px 15px rgba(15, 23, 42, 0.04);
+
+    box-sizing: border-box;
+
+    animation: editFormShow 0.45s ease;
+}
+
+
+/* =========================================================
+   FORM ANIMATION
+========================================================= */
+
+@keyframes editFormShow {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.edit-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 32px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e8edf3;
+}
+
+
+.edit-icon {
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: white;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 10px 22px rgba(37, 99, 235, 0.25);
+}
+
+
+.edit-header h1 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 30px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+}
+
+
+.edit-header p {
+    margin: 6px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    width: 100%;
+
+    margin-bottom: 22px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.form-group label {
+    margin-bottom: 9px;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 650;
+
+    letter-spacing: 0.1px;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d9e1eb;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   INPUT + SELECT
+========================================================= */
+
+.form-group input,
+.form-group select {
+    height: 50px;
+
+    padding: 0 15px;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.form-group textarea {
+    min-height: 115px;
+
+    padding: 14px 15px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3b82f6;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(59, 130, 246, 0.10);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.form-group select {
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+
+/* =========================================================
+   DATE / TIME
+========================================================= */
+
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   BUTTON AREA
+========================================================= */
+
+.edit-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e8edf3;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.edit-buttons button {
+    min-width: 145px;
+
+    height: 48px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+.cancel-btn {
+    background: #f1f5f9;
+
+    color: #475569;
+
+    border: 1px solid #e2e8f0 !important;
+}
+
+
+.cancel-btn:hover {
+    background: #e2e8f0;
+
+    color: #1e293b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   UPDATE BUTTON
+========================================================= */
+
+.update-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.22);
+}
+
+
+.update-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.30);
+}
+
+
+.update-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+========================================================= */
+
+.edit-buttons button:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.65;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.edit-loading {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    background: #f5f8fc;
+
+    color: #475569;
+
+    font-size: 15px;
+}
+
+
+.edit-loading p {
+    margin: 0;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   LOADING SPINNER
+========================================================= */
+
+.loading-spinner {
+    width: 46px;
+    height: 46px;
+
+    border: 4px solid #dbeafe;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: editSpinner 0.8s linear infinite;
+}
+
+
+@keyframes editSpinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   SELECTED / VALID
+========================================================= */
+
+.form-group input:valid,
+.form-group select:valid,
+.form-group textarea:valid {
+    color: #1e293b;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .edit-appointment {
+        padding: 30px 18px;
+    }
+
+
+    .edit-form {
+        max-width: 100%;
+
+        padding: 30px;
+
+        border-radius: 20px;
+    }
+
+
+    .edit-header {
+        margin-bottom: 26px;
+    }
+
+
+    .edit-header h1 {
+        font-size: 26px;
+    }
+
+
+    .edit-icon {
+        width: 56px;
+        height: 56px;
+
+        border-radius: 16px;
+
+        font-size: 25px;
+    }
+
+
+    .form-group {
+        margin-bottom: 19px;
+    }
+
+
+    .edit-buttons {
+        margin-top: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .edit-appointment {
+        min-height: 100vh;
+
+        padding: 18px 12px;
+    }
+
+
+    .edit-form {
+        padding: 22px 18px;
+
+        border-radius: 18px;
+    }
+
+
+    .edit-header {
+        gap: 13px;
+
+        margin-bottom: 24px;
+
+        padding-bottom: 20px;
+    }
+
+
+    .edit-icon {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 14px;
+
+        font-size: 21px;
+    }
+
+
+    .edit-header h1 {
+        font-size: 21px;
+
+        letter-spacing: 0;
+    }
+
+
+    .edit-header p {
+        font-size: 12px;
+
+        margin-top: 4px;
+    }
+
+
+    .form-group label {
+        font-size: 13px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .form-group input,
+    .form-group select {
+        height: 47px;
+
+        font-size: 14px;
+
+        padding: 0 12px;
+
+        border-radius: 10px;
+    }
+
+
+    .form-group textarea {
+        font-size: 14px;
+
+        padding: 12px;
+
+        border-radius: 10px;
+    }
+
+
+    .edit-buttons {
+        flex-direction: column-reverse;
+
+        gap: 10px;
+
+        margin-top: 22px;
+
+        padding-top: 20px;
+    }
+
+
+    .edit-buttons button {
+        width: 100%;
+
+        min-width: 0;
+
+        height: 47px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .edit-appointment {
+        padding: 12px 8px;
+    }
+
+
+    .edit-form {
+        padding: 18px 14px;
+    }
+
+
+    .edit-header {
+        gap: 10px;
+    }
+
+
+    .edit-icon {
+        width: 43px;
+        height: 43px;
+
+        font-size: 19px;
+    }
+
+
+    .edit-header h1 {
+        font-size: 19px;
+    }
+
+
+    .edit-header p {
+        font-size: 11px;
+    }
+
+}

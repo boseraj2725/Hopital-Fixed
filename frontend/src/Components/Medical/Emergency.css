@@ -1,0 +1,88 @@
+.emergency-page {
+    min-height: 100vh;
+    background: #f5f9ff;
+    padding: 60px 20px;
+}
+
+.emergency-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.emergency-container h1 {
+    text-align: center;
+    font-size: 38px;
+    color: #d32f2f;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.7;
+}
+
+.emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.emergency-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.emergency-card:hover {
+    transform: translateY(-8px);
+}
+
+.emergency-card h3 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.emergency-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.contact-box {
+    margin-top: 50px;
+    background: #d32f2f;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 18px;
+}
+
+.contact-box h2 {
+    margin-bottom: 15px;
+}
+
+.contact-box h3 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    font-size: 18px;
+}
+
+@media (max-width:768px) {
+
+    .emergency-container h1 {
+        font-size: 28px;
+    }
+
+    .contact-box h3 {
+        font-size: 26px;
+    }
+
+}

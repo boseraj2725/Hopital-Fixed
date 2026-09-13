@@ -1,0 +1,161 @@
+/* ==========================
+   Profile Page
+========================== */
+
+.profile-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef4ff, #f8fbff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #2563eb;
+    margin-bottom: 20px;
+    background: #f3f4f6;
+}
+
+.profile-card h2 {
+    margin-bottom: 20px;
+    color: #1f2937;
+    font-size: 28px;
+}
+
+.profile-card p {
+    text-align: left;
+    margin: 12px 0;
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.profile-card strong {
+    color: #111827;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.edit-btn,
+.password-btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    color: white;
+}
+
+.edit-btn {
+    background: #2563eb;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+}
+
+.password-btn {
+    background: #10b981;
+}
+
+.password-btn:hover {
+    background: #059669;
+}
+
+.loading {
+    text-align: center;
+    font-size: 24px;
+    color: #2563eb;
+    margin-top: 100px;
+}
+
+.upload-btn {
+    text-decoration: none;
+    background: #f59e0b;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.upload-btn:hover {
+    background: #d97706;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 768px) {
+
+    .profile-card {
+        padding: 25px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-card h2 {
+        font-size: 24px;
+    }
+
+    .profile-card p {
+        font-size: 15px;
+    }
+
+    .profile-buttons {
+        flex-direction: column;
+    }
+
+    .edit-btn,
+    .password-btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .profile-container {
+        padding: 20px 10px;
+    }
+
+    .profile-card {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .profile-card h2 {
+        font-size: 22px;
+    }
+
+}

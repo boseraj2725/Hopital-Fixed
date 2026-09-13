@@ -1,0 +1,93 @@
+.radiology-page {
+    min-height: 100vh;
+    background: #f4f9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.radiology-container {
+    width: 100%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.radiology-container h1 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 35px;
+    font-size: 17px;
+}
+
+.radiology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+.radiology-card {
+    background: #eef8ff;
+    padding: 25px;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.radiology-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
+}
+
+.radiology-card h3 {
+    color: #0077b6;
+    margin-bottom: 12px;
+}
+
+.radiology-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.book-btn {
+    margin-top: 35px;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 10px;
+    background: #0077b6;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.book-btn:hover {
+    background: #023e8a;
+}
+
+@media(max-width:768px){
+
+.radiology-container{
+padding:25px;
+}
+
+.radiology-container h1{
+font-size:28px;
+}
+
+.subtitle{
+font-size:15px;
+}
+
+.book-btn{
+width:100%;
+}
+
+}

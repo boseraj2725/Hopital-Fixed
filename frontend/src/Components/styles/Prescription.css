@@ -1,0 +1,95 @@
+.prescription {
+    min-height: 100vh;
+    background: #f5f7fb;
+    padding: 40px;
+}
+
+.prescription h1 {
+    text-align: center;
+    color: #0f766e;
+    margin-bottom: 30px;
+}
+
+.prescription-card {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+.prescription-card h2 {
+    color: #0f766e;
+    margin-bottom: 15px;
+}
+
+.prescription-card p {
+    margin: 10px 0;
+    color: #444;
+    font-size: 16px;
+}
+
+.prescription-card hr {
+    margin: 25px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.prescription-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.prescription-card th {
+    background: #0f766e;
+    color: #fff;
+    padding: 14px;
+}
+
+.prescription-card td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.prescription-card tr:hover {
+    background: #f8fafc;
+}
+
+.prescription-card button {
+    margin-top: 30px;
+    background: #0f766e;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.prescription-card button:hover {
+    background: #115e59;
+}
+
+@media(max-width:768px) {
+
+    .prescription {
+        padding: 20px;
+    }
+
+    .prescription-card {
+        padding: 20px;
+    }
+
+    .prescription-card table {
+        min-width: 650px;
+    }
+
+    .prescription-card {
+        overflow-x: auto;
+    }
+
+}

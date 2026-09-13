@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.doctor-profile {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f1f5f9;
+
+    overflow-x:hidden;
+
+}
+
+
+
+.doctor-card {
+
+    width:100%;
+
+    max-width:600px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+}
+
+
+
+.doctor-image {
+
+    width:150px;
+
+    height:150px;
+
+    max-width:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+
+
+.doctor-card h1 {
+
+    width:100%;
+
+    font-size:28px;
+
+    color:#1e293b;
+
+    overflow-wrap:break-word;
+
+}
+
+
+
+.doctor-card h3 {
+
+    color:#0284c7;
+
+}
+
+
+
+.doctor-details {
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+.detail-box {
+
+    width:100%;
+
+    padding:15px;
+
+    background:#f8fafc;
+
+    border-radius:15px;
+
+}
+
+
+
+.detail-box p {
+
+    overflow-wrap:break-word;
+
+}
+
+
+
+.appointment-btn {
+
+    width:100%;
+
+    max-width:300px;
+
+    margin-top:20px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#0284c7;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+
+@media(max-width:600px){
+
+    .doctor-profile{
+
+        padding:15px;
+
+    }
+
+
+    .doctor-card{
+
+        padding:20px;
+
+    }
+
+
+    .doctor-card h1{
+
+        font-size:22px;
+
+    }
+
+}

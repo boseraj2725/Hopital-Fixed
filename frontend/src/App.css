@@ -1,0 +1,43 @@
+/*___________________________app.jsx______________*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fc;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #0f766e;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+}

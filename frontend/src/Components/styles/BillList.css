@@ -1,0 +1,599 @@
+/* =========================================================
+   BILL LIST - PREMIUM HOSPITAL UI
+========================================================= */
+
+.bill-list {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(59, 130, 246, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(99, 102, 241, 0.07),
+            transparent 30%
+        ),
+        #f5f7fb;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #1e293b;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.bill-list > h1 {
+    margin: 0 0 25px;
+
+    color: #0f172a;
+
+    font-size: 32px;
+
+    font-weight: 750;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.search-box {
+    width: 100%;
+    max-width: 450px;
+
+    height: 48px;
+
+    margin-bottom: 24px;
+
+    padding: 0 17px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dbe3ed;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.05);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.search-box::placeholder {
+    color: #64748b;
+
+    font-size: 14px;
+
+    font-weight: 400;
+}
+
+
+.search-box:focus {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 4px rgba(59, 130, 246, 0.10);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.bill-list table {
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e8ef;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.bill-list thead {
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #eef2f7
+        );
+}
+
+
+.bill-list th {
+    padding: 18px 20px;
+
+    text-align: left;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.bill-list td {
+    padding: 19px 20px;
+
+    color: #475569;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    border-bottom: 1px solid #edf1f5;
+
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   ROW HOVER
+========================================================= */
+
+.bill-list tbody tr {
+    background: #ffffff;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.bill-list tbody tr:hover {
+    background: #f8fbff;
+}
+
+
+.bill-list tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   PATIENT NAME
+========================================================= */
+
+.bill-list td:first-child {
+    color: #111827;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DOCTOR NAME
+========================================================= */
+
+.bill-list td:nth-child(2) {
+    color: #475569;
+
+    font-size: 15px;
+
+    font-weight: 550;
+}
+
+
+/* =========================================================
+   TOTAL AMOUNT
+========================================================= */
+
+.bill-list td:nth-child(3) {
+    color: #111827;
+
+    font-size: 17px;
+
+    font-weight: 750;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.bill-list .paid,
+.bill-list .pending {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 82px;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PAID
+========================================================= */
+
+.bill-list .paid {
+    color: #15803d;
+
+    background: #dcfce7;
+
+    border: 1px solid #bbf7d0;
+}
+
+
+/* =========================================================
+   PENDING
+========================================================= */
+
+.bill-list .pending {
+    color: #b45309;
+
+    background: #fef3c7;
+
+    border: 1px solid #fde68a;
+}
+
+
+/* =========================================================
+   ACTION COLUMN
+========================================================= */
+
+.bill-list td:last-child {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ALL BUTTONS
+========================================================= */
+
+.bill-list button {
+    height: 37px;
+
+    margin-right: 7px;
+
+    padding: 0 14px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.bill-list button:last-child {
+    margin-right: 0;
+}
+
+
+.bill-list button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   EDIT BUTTON
+========================================================= */
+
+.bill-list .edit-btn {
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+}
+
+
+.bill-list .edit-btn:hover {
+    color: #1d4ed8;
+
+    background: #dbeafe;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.14);
+}
+
+
+/* =========================================================
+   INVOICE BUTTON
+========================================================= */
+
+.bill-list .view-btn {
+    color: #7c3aed;
+
+    background: #f5f3ff;
+
+    border: 1px solid #ede9fe;
+}
+
+
+.bill-list .view-btn:hover {
+    color: #6d28d9;
+
+    background: #ede9fe;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(124, 58, 237, 0.14);
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.bill-list .delete-btn {
+    color: #dc2626;
+
+    background: #fef2f2;
+
+    border: 1px solid #fee2e2;
+}
+
+
+.bill-list .delete-btn:hover {
+    color: #b91c1c;
+
+    background: #fee2e2;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(220, 38, 38, 0.14);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.bill-list tbody td[colspan="5"] {
+    padding: 60px 20px !important;
+
+    text-align: center !important;
+
+    color: #64748b;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .bill-list {
+        padding: 28px 22px;
+    }
+
+    .bill-list > h1 {
+        font-size: 29px;
+    }
+
+    .bill-list table {
+        min-width: 900px;
+    }
+
+    .bill-list {
+        overflow-x: auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .bill-list {
+        padding: 22px 12px;
+
+        overflow-x: auto;
+    }
+
+
+    .bill-list > h1 {
+        font-size: 25px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .search-box {
+        max-width: 100%;
+
+        height: 46px;
+
+        margin-bottom: 18px;
+
+        font-size: 14px;
+    }
+
+
+    .bill-list table {
+        min-width: 900px;
+    }
+
+
+    .bill-list th {
+        padding: 15px 16px;
+
+        font-size: 12px;
+    }
+
+
+    .bill-list td {
+        padding: 16px;
+
+        font-size: 14px;
+    }
+
+
+    .bill-list td:first-child {
+        font-size: 15px;
+    }
+
+
+    .bill-list td:nth-child(3) {
+        font-size: 16px;
+    }
+
+
+    .bill-list button {
+        height: 35px;
+
+        padding: 0 12px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .bill-list {
+        padding: 18px 10px;
+    }
+
+
+    .bill-list > h1 {
+        font-size: 22px;
+    }
+
+
+    .search-box {
+        height: 44px;
+
+        font-size: 13px;
+    }
+
+
+    .search-box::placeholder {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.bill-list::-webkit-scrollbar {
+    height: 7px;
+}
+
+
+.bill-list::-webkit-scrollbar-track {
+    background: #edf1f6;
+
+    border-radius: 10px;
+}
+
+
+.bill-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 10px;
+}
+
+
+.bill-list::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

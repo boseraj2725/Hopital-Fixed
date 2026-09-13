@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+}
+
+.edit-bill {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #dbeafe, #f8fafc, #e0f2fe);
+}
+
+.edit-bill-form {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .1);
+}
+
+.edit-bill-form h1 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 30px;
+    font-size: 34px;
+}
+
+.edit-bill-form input,
+.edit-bill-form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: .3s;
+}
+
+.edit-bill-form input:focus,
+.edit-bill-form select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 10px rgba(37, 99, 235, .2);
+}
+
+.total-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1d4ed8;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.edit-bill-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.edit-bill-form button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.edit-bill-form button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+@media(max-width:768px) {
+
+    .edit-bill-form {
+        padding: 25px;
+    }
+
+    .edit-bill-form h1 {
+        font-size: 28px;
+    }
+
+}

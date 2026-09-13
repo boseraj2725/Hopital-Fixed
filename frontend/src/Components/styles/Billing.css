@@ -1,0 +1,825 @@
+/* =========================================================
+   BILL LIST
+   Premium Hospital Billing Dashboard
+========================================================= */
+
+.bill-list {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(59, 130, 246, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(99, 102, 241, 0.07),
+            transparent 30%
+        ),
+        #f6f8fc;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.bill-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+
+.bill-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.bill-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 27px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    box-shadow:
+        0 10px 24px rgba(37, 99, 235, 0.22);
+}
+
+
+.bill-title h1 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 30px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+}
+
+
+.bill-title p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BILL COUNT
+========================================================= */
+
+.bill-count {
+    min-width: 120px;
+
+    padding: 13px 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf1;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.05);
+}
+
+
+.bill-count span {
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.bill-count strong {
+    margin-top: 3px;
+
+    color: #2563eb;
+
+    font-size: 23px;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.bill-filters {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.bill-search {
+    flex: 1;
+
+    max-width: 500px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e6ef;
+
+    border-radius: 12px;
+
+    transition: 0.2s ease;
+}
+
+
+.bill-search:focus-within {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 4px rgba(59, 130, 246, 0.09);
+}
+
+
+.bill-search span {
+    font-size: 17px;
+}
+
+
+.bill-search input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #1e293b;
+
+    font-size: 14px;
+}
+
+
+.bill-search input::placeholder {
+    color: #94a3b8;
+}
+
+
+.bill-filters select {
+    height: 48px;
+
+    min-width: 180px;
+
+    padding: 0 14px;
+
+    border: 1px solid #e0e6ef;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+.bill-filters select:focus {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 4px rgba(59, 130, 246, 0.09);
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.bill-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf1;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.bill-table {
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: collapse;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.bill-table thead {
+    background: #f8fafc;
+}
+
+
+.bill-table th {
+    padding: 17px 20px;
+
+    text-align: left;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    border-bottom: 1px solid #e7edf4;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.bill-table td {
+    padding: 18px 20px;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #eef2f7;
+
+    vertical-align: middle;
+}
+
+
+.bill-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+
+.bill-table tbody tr:hover {
+    background: #f8fbff;
+}
+
+
+.bill-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   PATIENT INFO
+========================================================= */
+
+.patient-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.patient-avatar {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #bfdbfe
+        );
+
+    color: #2563eb;
+
+    font-size: 15px;
+
+    font-weight: 750;
+}
+
+
+.patient-info div:last-child,
+.doctor-info div:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.patient-info strong,
+.doctor-info strong {
+    color: #1e293b;
+
+    font-size: 14px;
+
+    font-weight: 650;
+}
+
+
+.patient-info span,
+.doctor-info span {
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   DOCTOR INFO
+========================================================= */
+
+.doctor-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.doctor-avatar {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dcfce7,
+            #bbf7d0
+        );
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   AMOUNT
+========================================================= */
+
+.bill-amount {
+    color: #172033;
+
+    font-size: 16px;
+
+    font-weight: 750;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PAYMENT STATUS
+========================================================= */
+
+.payment-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 85px;
+
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.payment-status.paid {
+    color: #15803d;
+
+    background: #dcfce7;
+
+    border: 1px solid #bbf7d0;
+}
+
+
+.payment-status.pending {
+    color: #b45309;
+
+    background: #fef3c7;
+
+    border: 1px solid #fde68a;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.bill-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.bill-actions button {
+    height: 36px;
+
+    padding: 0 12px;
+
+    border-radius: 9px;
+
+    border: none;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* =========================================================
+   INVOICE BUTTON
+========================================================= */
+
+.invoice-btn {
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe !important;
+}
+
+
+.invoice-btn:hover {
+    background: #dbeafe;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.bill-actions .delete-btn {
+    color: #dc2626;
+
+    background: #fef2f2;
+
+    border: 1px solid #fee2e2;
+}
+
+
+.bill-actions .delete-btn:hover {
+    background: #fee2e2;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(220, 38, 38, 0.10);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.no-bills {
+    padding: 65px 20px !important;
+
+    text-align: center !important;
+}
+
+
+.empty-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #f1f5f9;
+
+    font-size: 28px;
+}
+
+
+.no-bills h3 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 18px;
+}
+
+
+.no-bills p {
+    margin: 7px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.bill-loading {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    background: #f6f8fc;
+
+    color: #64748b;
+}
+
+
+.bill-loading p {
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.bill-spinner {
+    width: 44px;
+    height: 44px;
+
+    border: 4px solid #dbeafe;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: billSpin 0.8s linear infinite;
+}
+
+
+@keyframes billSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .bill-list {
+        padding: 28px 20px;
+    }
+
+
+    .bill-title h1 {
+        font-size: 27px;
+    }
+
+
+    .bill-table {
+        min-width: 850px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .bill-list {
+        padding: 20px 12px;
+    }
+
+
+    .bill-header {
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .bill-title {
+        gap: 10px;
+    }
+
+
+    .bill-icon {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 13px;
+
+        font-size: 22px;
+    }
+
+
+    .bill-title h1 {
+        font-size: 22px;
+    }
+
+
+    .bill-title p {
+        font-size: 11px;
+    }
+
+
+    .bill-count {
+        min-width: 75px;
+
+        padding: 9px 10px;
+    }
+
+
+    .bill-count span {
+        font-size: 10px;
+    }
+
+
+    .bill-count strong {
+        font-size: 19px;
+    }
+
+
+    .bill-filters {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .bill-search {
+        max-width: none;
+
+        width: 100%;
+    }
+
+
+    .bill-filters select {
+        width: 100%;
+    }
+
+
+    .bill-table-wrapper {
+        border-radius: 14px;
+    }
+
+
+    .bill-table {
+        min-width: 850px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .bill-list {
+        padding: 15px 8px;
+    }
+
+
+    .bill-header {
+        flex-wrap: wrap;
+    }
+
+
+    .bill-count {
+        margin-left: auto;
+    }
+
+}

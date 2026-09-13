@@ -1,0 +1,131 @@
+.recent-appointments {
+
+    background: white;
+
+    padding: 25px;
+
+    margin-top: 35px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+    overflow-x: auto;
+
+}
+
+.recent-appointments h2 {
+
+    margin-bottom: 20px;
+
+    color: #0f172a;
+
+}
+
+.recent-appointments table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+.recent-appointments th {
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 14px;
+
+}
+
+.recent-appointments td {
+
+    padding: 14px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    text-align: center;
+
+}
+
+.status {
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+.pending {
+
+    background: #fde68a;
+
+    color: #92400e;
+
+}
+
+.confirmed {
+
+    background: #bfdbfe;
+
+    color: #1e40af;
+
+}
+
+.completed {
+
+    background: #bbf7d0;
+
+    color: #166534;
+
+}
+
+.cancelled {
+
+    background: #fecaca;
+
+    color: #991b1b;
+
+}
+
+.view-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 8px 15px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+}
+
+.view-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+@media(max-width:768px) {
+
+    .recent-appointments {
+
+        padding: 15px;
+
+    }
+
+    table {
+
+        font-size: 13px;
+
+    }
+
+}

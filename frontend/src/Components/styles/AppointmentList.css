@@ -1,0 +1,618 @@
+/* =========================================================
+   SMARTCARE AI - APPOINTMENT LIST
+   Premium Responsive Design
+========================================================= */
+
+.appointment-list {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(37, 99, 235, 0.08),
+            transparent 30%
+        ),
+        #f8fafc;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.appointment-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.appointment-list-header h1 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.appointment-list-header p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   APPOINTMENT COUNT
+========================================================= */
+
+.appointment-count {
+    min-width: 110px;
+    padding: 14px 18px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+    color: #2563eb;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.appointment-count span {
+    display: block;
+    margin-top: 3px;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FILTER BAR
+========================================================= */
+
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-box {
+    flex: 1;
+    min-width: 220px;
+    height: 46px;
+    padding: 0 16px;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    outline: none;
+    background: #f8fafc;
+    color: #0f172a;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+.search-box::placeholder {
+    color: #94a3b8;
+}
+
+.search-box:focus {
+    background: #ffffff;
+    border-color: #2563eb;
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   STATUS FILTER
+========================================================= */
+
+.filter-bar select {
+    height: 46px;
+    min-width: 170px;
+    padding: 0 14px;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    outline: none;
+    background: #f8fafc;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-bar select:focus {
+    border-color: #2563eb;
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+========================================================= */
+
+.appointment-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.appointment-table-wrapper table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.appointment-table-wrapper thead {
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #f8fafc
+        );
+}
+
+.appointment-table-wrapper th {
+    padding: 17px 16px;
+    color: #475569;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.appointment-table-wrapper td {
+    padding: 17px 16px;
+    border-bottom: 1px solid #eef2f7;
+    color: #334155;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.appointment-table-wrapper tbody tr {
+    transition: all 0.2s ease;
+}
+
+.appointment-table-wrapper tbody tr:hover {
+    background: #f8fbff;
+}
+
+.appointment-table-wrapper tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   PATIENT CELL
+========================================================= */
+
+.patient-cell {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.patient-avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        );
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    box-shadow:
+        0 5px 15px rgba(37, 99, 235, 0.20);
+}
+
+.patient-cell strong {
+    display: block;
+    color: #0f172a;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.patient-cell small {
+    display: block;
+    margin-top: 3px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   DOCTOR CELL
+========================================================= */
+
+.doctor-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #334155;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TIME BADGE
+========================================================= */
+
+.time-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 10px;
+    border-radius: 9px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 82px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+
+/* Pending */
+
+.status.pending {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+
+/* Confirmed */
+
+.status.confirmed {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+
+/* Completed */
+
+.status.completed {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+
+/* Cancelled */
+
+.status.cancelled {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: nowrap;
+}
+
+.action-buttons button {
+    border: none;
+    border-radius: 9px;
+    padding: 8px 11px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.action-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   EDIT BUTTON
+========================================================= */
+
+.edit-btn {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.edit-btn:hover {
+    background: #dbeafe;
+    box-shadow:
+        0 6px 15px rgba(37, 99, 235, 0.15);
+}
+
+
+/* =========================================================
+   VIDEO BUTTON
+========================================================= */
+
+.video-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+    color: #ffffff;
+}
+
+.video-btn:hover {
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, 0.28);
+}
+
+
+/* =========================================================
+   SHARE BUTTON
+========================================================= */
+
+.share-btn {
+    background: #ecfdf5;
+    color: #15803d;
+}
+
+.share-btn:hover {
+    background: #dcfce7;
+    box-shadow:
+        0 6px 15px rgba(22, 163, 74, 0.15);
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.delete-btn {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #fee2e2;
+    box-shadow:
+        0 6px 15px rgba(220, 38, 38, 0.15);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.no-appointments {
+    height: 260px;
+    text-align: center;
+}
+
+.no-appointments > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    border-radius: 20px;
+    background: #eff6ff;
+    font-size: 32px;
+}
+
+.no-appointments h3 {
+    margin: 0;
+    color: #334155;
+    font-size: 18px;
+}
+
+.no-appointments p {
+    margin: 7px 0 0;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.appointment-table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.appointment-table-wrapper::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+.appointment-table-wrapper::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.appointment-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .appointment-list {
+        padding: 22px;
+    }
+
+    .appointment-list-header h1 {
+        font-size: 27px;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .filter-bar select {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .appointment-list {
+        padding: 15px;
+    }
+
+    .appointment-list-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .appointment-list-header h1 {
+        font-size: 24px;
+    }
+
+    .appointment-list-header p {
+        font-size: 12px;
+    }
+
+    .appointment-count {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .filter-bar {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .appointment-table-wrapper {
+        border-radius: 14px;
+    }
+
+    .appointment-table-wrapper table {
+        min-width: 950px;
+    }
+
+    .appointment-table-wrapper th {
+        padding: 14px 12px;
+        font-size: 11px;
+    }
+
+    .appointment-table-wrapper td {
+        padding: 14px 12px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .appointment-list {
+        padding: 10px;
+    }
+
+    .appointment-list-header h1 {
+        font-size: 21px;
+    }
+
+    .search-box,
+    .filter-bar select {
+        height: 43px;
+        font-size: 12px;
+    }
+
+}

@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+}
+
+.loading {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #0f766e;
+}
+
+.patient-list {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.patient-list h1 {
+    text-align: center;
+    color: #0f766e;
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+.patient-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.patient-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    transition: .3s;
+    border-top: 5px solid #0f766e;
+}
+
+.patient-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .15);
+}
+
+.patient-card h2 {
+    color: #0f766e;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.patient-card p {
+    margin: 10px 0;
+    color: #444;
+}
+
+.patient-card strong {
+    color: #111;
+}
+
+.patient-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-btn,
+.delete-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.edit-btn {
+    background: #2563eb;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+@media(max-width:768px) {
+
+    .patient-list {
+        width: 95%;
+    }
+
+    .patient-list h1 {
+        font-size: 28px;
+    }
+
+    .patient-buttons {
+        flex-direction: column;
+    }
+
+}
+
+.search-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto 30px;
+    display: block;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: #0f766e;
+    box-shadow: 0 0 10px rgba(15, 118, 110, .2);
+}
+
+.patient-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-btn,
+.delete-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #2563eb;
+}
+
+.delete-btn {
+    background: #dc2626;
+}

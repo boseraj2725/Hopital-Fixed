@@ -1,0 +1,31 @@
+.chart-card {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+    margin-top: 30px;
+
+}
+
+.chart-card h2 {
+
+    text-align: center;
+
+    color: #2563eb;
+
+    margin-bottom: 20px;
+
+}
+
+.chart-body {
+
+    width: 100%;
+
+    min-height: 300px;
+
+}

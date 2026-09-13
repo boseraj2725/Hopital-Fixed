@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.invoice {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #0f766e, #2563eb, #06b6d4);
+}
+
+.invoice-card {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+}
+
+.invoice-card h1 {
+    text-align: center;
+    color: #0f766e;
+    margin-bottom: 10px;
+}
+
+.invoice-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2563eb;
+}
+
+.invoice-card hr {
+    margin: 20px 0;
+}
+
+.invoice-card p {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.invoice-card strong {
+    color: #0f766e;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.print-btn,
+.pdf-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.print-btn {
+    background: #2563eb;
+}
+
+.print-btn:hover {
+    background: #1d4ed8;
+}
+
+.pdf-btn {
+    background: #16a34a;
+}
+
+.pdf-btn:hover {
+    background: #15803d;
+}
+
+.pdf-btn:disabled,
+.email-box button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.email-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    background: #7c3aed;
+}
+
+.email-btn:hover {
+    background: #6d28d9;
+}
+
+.email-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.email-box input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.email-box input:focus {
+    outline: none;
+    border-color: #7c3aed;
+}
+
+.email-box button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #7c3aed;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.email-box button:hover {
+    background: #6d28d9;
+}
+
+@media(max-width:768px) {
+    .email-box {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:768px) {
+
+    .invoice {
+        padding: 20px;
+    }
+
+    .invoice-card {
+        padding: 25px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+}
+
+@media print {
+
+    .button-group {
+        display: none;
+    }
+
+    .invoice {
+        background: white;
+        padding: 0;
+    }
+
+    .invoice-card {
+        box-shadow: none;
+        border: none;
+    }
+
+}
